@@ -167,12 +167,19 @@ const arrayOfPersons = [
 
 let wrapper = document.createElement('form');
 document.body.append(wrapper);
+let userNameLabel = document.createElement('label');
 let userNameInput = document.createElement('input');
+let emailLabel = document.createElement('label');
 let emailInput = document.createElement('input');
+let passwordLabel = document.createElement('label');
 let passwordInput = document.createElement('input');
+let checkboxLabel = document.createElement('label');
 let checkboxInput = document.createElement('input');
+let textAreaLabel = document.createElement('label');
 let textArea = document.createElement('textarea');
+let radioBtnPaidLabel = document.createElement('label');
 let radioBtnPaid = document.createElement('input');
+let radioBtnFreeLabel = document.createElement('label');
 let radioBtnFree = document.createElement('input');
 let btn = document.createElement('button');
 
