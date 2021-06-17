@@ -165,23 +165,75 @@ const arrayOfPersons = [
 //#3
 
 
-let wrapper = document.createElement('form');
-document.body.append(wrapper);
+let formWrapper = document.createElement('form');
+document.body.append(formWrapper);
+formWrapper.classList.add('form');
+
+let wrapperUserName = document.createElement('div')
+wrapperUserName.classList.add('info-block');
+let wrapperEmail = document.createElement('div')
+wrapperEmail.classList.add('info-block');
+let wrapperPassword = document.createElement('div')
+wrapperPassword.classList.add('info-block');
+let wrapperCheckbox = document.createElement('div')
+wrapperCheckbox.classList.add('info-block');
+let wrapperTextarea = document.createElement('div')
+wrapperTextarea.classList.add('info-block');
+let wrapperAccount = document.createElement('div')
+wrapperAccount.classList.add('info-block');
+
+formWrapper.append(wrapperUserName, wrapperEmail, wrapperPassword, wrapperCheckbox, wrapperTextarea, wrapperAccount);
+
 let userNameLabel = document.createElement('label');
+userNameLabel.innerText = 'Имя пользователя'
 let userNameInput = document.createElement('input');
+userNameInput.type = 'text'
+wrapperUserName.append(userNameLabel, userNameInput)
+
 let emailLabel = document.createElement('label');
+emailLabel.innerText = 'Email'
 let emailInput = document.createElement('input');
+emailInput.type = 'email'
+wrapperEmail.append(emailLabel, emailInput)
+
 let passwordLabel = document.createElement('label');
+passwordLabel.innerText = 'Password'
 let passwordInput = document.createElement('input');
+passwordInput.type = 'password'
+wrapperPassword.append(passwordLabel, passwordInput)
+
 let checkboxLabel = document.createElement('label');
+checkboxLabel.innerText = '"Я прочитал пользовательское соглашение"'
 let checkboxInput = document.createElement('input');
+checkboxInput.type = 'checkbox'
+checkboxLabel.append(checkboxInput)
+wrapperCheckbox.append(checkboxLabel)
+
 let textAreaLabel = document.createElement('label');
+textAreaLabel.innerText = 'Пожелания разработчикам'
 let textArea = document.createElement('textarea');
+
+wrapperTextarea.append(textAreaLabel, textArea)
+
 let radioBtnPaidLabel = document.createElement('label');
+radioBtnPaidLabel.innerText = 'Платный аккаунт'
 let radioBtnPaid = document.createElement('input');
+radioBtnPaid.type = 'radio'
+radioBtnPaid.name = "account"
+radioBtnPaidLabel.append(radioBtnPaid)
 let radioBtnFreeLabel = document.createElement('label');
+radioBtnFreeLabel.innerText = 'Бесплатный аккаунт'
 let radioBtnFree = document.createElement('input');
+radioBtnFree.checked = true;
+radioBtnFree.type = 'radio'
+radioBtnFree.name = "account"
+radioBtnFreeLabel.append(radioBtnFree)
+
+wrapperAccount.append(radioBtnPaidLabel, radioBtnFreeLabel)
+
 let btn = document.createElement('button');
+btn.innerText = 'submit'
+formWrapper.append(btn)
 
 
 

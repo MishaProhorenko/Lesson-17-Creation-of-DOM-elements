@@ -26,8 +26,7 @@ body {
 }
 
 .form {
-	width: 100vw;
-	
+	width: 100vw;		
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -50,5 +49,11 @@ body {
 	justify-content: space-between;
 	align-items: center;
 }
+
+
+.btn {
+	
+}
+
 
 .email-block {}
