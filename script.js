@@ -235,6 +235,11 @@ let btn = document.createElement('button');
 btn.innerText = 'submit'
 formWrapper.append(btn)
 
+btn.addEventListener('click', (e) => {
+	e.preventDefault();
+	console.log('Кнопка работает')
+})
+
 
 
 //=========================================================================
