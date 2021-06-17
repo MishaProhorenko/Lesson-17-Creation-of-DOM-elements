@@ -139,25 +139,24 @@ const arrayOfPersons = [
 ];
 
 
-// let container = document.createElement('div');
-// container.className = 'container';
+let container = document.createElement('div');
+container.className = 'container';
 
-// arrayOfPersons.forEach(item => {	
-// 	let userCard = document.createElement('div');
-// 	userCard.className = 'userCard';
-// 	let userName = document.createElement('div');
-// 	let userSurName = document.createElement('div');
-// 	let userAge = document.createElement('div');
-// 	let userNationality = document.createElement('div');
-// 	document.body.append(container);
-// 	container.append(userCard);
-// 	userCard.append(userName, userSurName, userAge, userNationality);
-// 	userName.innerText = `Name: ${item.name}`;
-// 	userSurName.innerText = `Surname: ${item.surname}`;
-// 	userAge.innerText = `Age: ${item.age}`;
-// 	userNationality.innerText = `Nationality: ${item.nationality}`;	
-// });
-
+arrayOfPersons.forEach(item => {	
+	let userCard = document.createElement('div');
+	userCard.className = 'userCard';
+	let userName = document.createElement('div');
+	let userSurName = document.createElement('div');
+	let userAge = document.createElement('div');
+	let userNationality = document.createElement('div');
+	document.body.append(container);
+	container.append(userCard);
+	userCard.append(userName, userSurName, userAge, userNationality);
+	userName.innerText = `Name: ${item.name}`;
+	userSurName.innerText = `Surname: ${item.surname}`;
+	userAge.innerText = `Age: ${item.age}`;
+	userNationality.innerText = `Nationality: ${item.nationality}`;	
+});
 
 
 
@@ -165,80 +164,79 @@ const arrayOfPersons = [
 //#3
 
 
-let formWrapper = document.createElement('form');
-document.body.append(formWrapper);
-formWrapper.classList.add('form');
+// let formWrapper = document.createElement('form');
+// document.body.append(formWrapper);
+// formWrapper.classList.add('form');
 
-let wrapperUserName = document.createElement('div')
-wrapperUserName.classList.add('info-block');
-let wrapperEmail = document.createElement('div')
-wrapperEmail.classList.add('info-block');
-let wrapperPassword = document.createElement('div')
-wrapperPassword.classList.add('info-block');
-let wrapperCheckbox = document.createElement('div')
-wrapperCheckbox.classList.add('info-block');
-let wrapperTextarea = document.createElement('div')
-wrapperTextarea.classList.add('info-block');
-let wrapperAccount = document.createElement('div')
-wrapperAccount.classList.add('info-block');
+// let wrapperUserName = document.createElement('div')
+// wrapperUserName.classList.add('info-block');
+// let wrapperEmail = document.createElement('div')
+// wrapperEmail.classList.add('info-block');
+// let wrapperPassword = document.createElement('div')
+// wrapperPassword.classList.add('info-block');
+// let wrapperCheckbox = document.createElement('div')
+// wrapperCheckbox.classList.add('info-block');
+// let wrapperTextarea = document.createElement('div')
+// wrapperTextarea.classList.add('info-block');
+// let wrapperAccount = document.createElement('div')
+// wrapperAccount.classList.add('info-block');
 
-formWrapper.append(wrapperUserName, wrapperEmail, wrapperPassword, wrapperCheckbox, wrapperTextarea, wrapperAccount);
+// formWrapper.append(wrapperUserName, wrapperEmail, wrapperPassword, wrapperCheckbox, wrapperTextarea, wrapperAccount);
 
-let userNameLabel = document.createElement('label');
-userNameLabel.innerText = 'Имя пользователя'
-let userNameInput = document.createElement('input');
-userNameInput.type = 'text'
-wrapperUserName.append(userNameLabel, userNameInput)
+// let userNameLabel = document.createElement('label');
+// userNameLabel.innerText = 'Имя пользователя';
+// let userNameInput = document.createElement('input');
+// userNameInput.type = 'text';
+// wrapperUserName.append(userNameLabel, userNameInput)
 
-let emailLabel = document.createElement('label');
-emailLabel.innerText = 'Email'
-let emailInput = document.createElement('input');
-emailInput.type = 'email'
-wrapperEmail.append(emailLabel, emailInput)
+// let emailLabel = document.createElement('label');
+// emailLabel.innerText = 'Email';
+// let emailInput = document.createElement('input');
+// emailInput.type = 'email';
+// wrapperEmail.append(emailLabel, emailInput);
 
-let passwordLabel = document.createElement('label');
-passwordLabel.innerText = 'Password'
-let passwordInput = document.createElement('input');
-passwordInput.type = 'password'
-wrapperPassword.append(passwordLabel, passwordInput)
+// let passwordLabel = document.createElement('label');
+// passwordLabel.innerText = 'Password';
+// let passwordInput = document.createElement('input');
+// passwordInput.type = 'password';
+// wrapperPassword.append(passwordLabel, passwordInput)
 
-let checkboxLabel = document.createElement('label');
-checkboxLabel.innerText = '"Я прочитал пользовательское соглашение"'
-let checkboxInput = document.createElement('input');
-checkboxInput.type = 'checkbox'
-checkboxLabel.append(checkboxInput)
-wrapperCheckbox.append(checkboxLabel)
+// let checkboxLabel = document.createElement('label');
+// checkboxLabel.innerText = '"Я прочитал пользовательское соглашение"';
+// let checkboxInput = document.createElement('input');
+// checkboxInput.type = 'checkbox';
+// wrapperCheckbox.append(checkboxLabel, checkboxInput);
 
-let textAreaLabel = document.createElement('label');
-textAreaLabel.innerText = 'Пожелания разработчикам'
-let textArea = document.createElement('textarea');
+// let textAreaLabel = document.createElement('label');
+// textAreaLabel.innerText = 'Пожелания разработчикам';
+// let textArea = document.createElement('textarea');
+// textArea.rows = '5';
+// wrapperTextarea.append(textAreaLabel, textArea);
 
-wrapperTextarea.append(textAreaLabel, textArea)
+// let radioBtnPaidLabel = document.createElement('label');
+// radioBtnPaidLabel.innerText = 'Платный аккаунт';
+// let radioBtnPaid = document.createElement('input');
+// radioBtnPaid.type = 'radio';
+// radioBtnPaid.name = "account";
+// radioBtnPaidLabel.append(radioBtnPaid);
+// let radioBtnFreeLabel = document.createElement('label');
+// radioBtnFreeLabel.innerText = 'Бесплатный аккаунт';
+// let radioBtnFree = document.createElement('input');
+// radioBtnFree.checked = true;
+// radioBtnFree.type = 'radio';
+// radioBtnFree.name = "account";
+// radioBtnFreeLabel.append(radioBtnFree);
 
-let radioBtnPaidLabel = document.createElement('label');
-radioBtnPaidLabel.innerText = 'Платный аккаунт'
-let radioBtnPaid = document.createElement('input');
-radioBtnPaid.type = 'radio'
-radioBtnPaid.name = "account"
-radioBtnPaidLabel.append(radioBtnPaid)
-let radioBtnFreeLabel = document.createElement('label');
-radioBtnFreeLabel.innerText = 'Бесплатный аккаунт'
-let radioBtnFree = document.createElement('input');
-radioBtnFree.checked = true;
-radioBtnFree.type = 'radio'
-radioBtnFree.name = "account"
-radioBtnFreeLabel.append(radioBtnFree)
+// wrapperAccount.append(radioBtnPaidLabel, radioBtnFreeLabel);
 
-wrapperAccount.append(radioBtnPaidLabel, radioBtnFreeLabel)
+// let btn = document.createElement('button');
+// btn.innerText = 'submit';
+// formWrapper.append(btn);
 
-let btn = document.createElement('button');
-btn.innerText = 'submit'
-formWrapper.append(btn)
-
-btn.addEventListener('click', (e) => {
-	e.preventDefault();
-	console.log('Кнопка работает')
-})
+// btn.addEventListener('click', (e) => {
+// 	e.preventDefault();
+// 	console.log('Кнопка работает');
+// });
 
 
 
