@@ -163,12 +163,12 @@ arrayOfPersons.forEach(item => {
 	userNationality.innerText = `Nationality: ${item.nationality}`;
 	objectValue.forEach(elem => {
 		if (Array.isArray(elem)) {
-			elem.forEach(elem1 => {
+			elem.forEach(elemList => {
 				// let li = document.createElement('li');
 				let ul = document.createElement('ul');
 				// li.innerText = elem1;
 				// ul.append(li);
-				ul.innerHTML = `<li>${elem1}</li>`
+				ul.innerHTML = `<li>${elemList}</li>`
 				userCard.append(ul);
 
 			})
