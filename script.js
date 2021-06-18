@@ -138,25 +138,61 @@ const arrayOfPersons = [
 	}
 ];
 
+var mainList = document.getElementById("navp");
+let array = arrayOfPersons.forEach(item => {
+	let value = Object.values(item);
+	value.forEach(item1 => {
+		if (Array.isArray(item1)) {
+			console.log(item1)
+		}
+	})
+})
 
-let container = document.createElement('div');
-container.className = 'container';
+console.log(array);
 
-arrayOfPersons.forEach(item => {	
-	let userCard = document.createElement('div');
-	userCard.className = 'userCard';
-	let userName = document.createElement('div');
-	let userSurName = document.createElement('div');
-	let userAge = document.createElement('div');
-	let userNationality = document.createElement('div');
-	document.body.append(container);
-	container.append(userCard);
-	userCard.append(userName, userSurName, userAge, userNationality);
-	userName.innerText = `Name: ${item.name}`;
-	userSurName.innerText = `Surname: ${item.surname}`;
-	userAge.innerText = `Age: ${item.age}`;
-	userNationality.innerText = `Nationality: ${item.nationality}`;	
-});
+
+
+
+// let container = document.createElement('div');
+// container.className = 'container';
+
+// arrayOfPersons.forEach(item => {
+// 	let objectValue = Object.values(item);
+// 	objectValue.forEach(elem =>{
+// 		if (Array.isArray(elem)) {
+// 			let userCard = document.createElement('div');
+// 			userCard.className = 'userCard';
+// 			let userName = document.createElement('div');
+// 			let userSurName = document.createElement('div');
+// 			let userAge = document.createElement('div');
+// 			let userNationality = document.createElement('div');
+// 			let ul = document.createElement('ul');
+// 			let li = document.createElement('li');			
+// 			ul.append(li)
+// 			document.body.append(container);
+// 			container.append(userCard);
+// 			userCard.append(userName, userSurName, userAge, userNationality, ul);
+// 			userName.innerText = `Name: ${item.name}`;
+// 			userSurName.innerText = `Surname: ${item.surname}`;
+// 			userAge.innerText = `Age: ${item.age}`;
+// 			userNationality.innerText = `Nationality: ${item.nationality}`;
+// 			li.innerText = `${elem}`
+// 		}
+// 	})
+// 	let userCard = document.createElement('div');
+// 	userCard.className = 'userCard';
+// 	let userName = document.createElement('div');
+// 	let userSurName = document.createElement('div');
+// 	let userAge = document.createElement('div');
+// 	let userNationality = document.createElement('div');
+// 	document.body.append(container);
+// 	container.append(userCard);
+// 	userCard.append(userName, userSurName, userAge, userNationality);
+// 	userName.innerText = `Name: ${item.name}`;
+// 	userSurName.innerText = `Surname: ${item.surname}`;
+// 	userAge.innerText = `Age: ${item.age}`;
+// 	userNationality.innerText = `Nationality: ${item.nationality}`;
+// });
 
 
 
