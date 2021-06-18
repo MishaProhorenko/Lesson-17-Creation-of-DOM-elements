@@ -147,9 +147,13 @@ arrayOfPersons.forEach(item => {
 	let userCard = document.createElement('div');
 	userCard.className = 'userCard';
 	let userName = document.createElement('div');
+	userName.style.padding = '10px'
 	let userSurName = document.createElement('div');
+	userSurName.style.padding = '10px'
 	let userAge = document.createElement('div');
+	userAge.style.padding = '10px'
 	let userNationality = document.createElement('div');
+	userNationality.style.padding = '10px'
 	document.body.append(container);
 	container.append(userCard);
 	userCard.append(userName, userSurName, userAge, userNationality);
@@ -160,11 +164,13 @@ arrayOfPersons.forEach(item => {
 	objectValue.forEach(elem => {
 		if (Array.isArray(elem)) {
 			elem.forEach(elem1 => {
-				let li = document.createElement('li');
+				// let li = document.createElement('li');
 				let ul = document.createElement('ul');
-				li.innerText = elem1;
-				ul.append(li);
+				// li.innerText = elem1;
+				// ul.append(li);
+				ul.innerHTML = `<li>${elem1}</li>`
 				userCard.append(ul);
+
 			})
 		}
 	})
