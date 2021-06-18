@@ -15,7 +15,7 @@ body {
 
 .userCard {
 	min-width: 12%;
-	height: 150px;
+	height: 350px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
