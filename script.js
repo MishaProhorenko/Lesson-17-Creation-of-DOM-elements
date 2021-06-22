@@ -140,12 +140,12 @@ const arrayOfPersons = [
 
 
 let container = document.createElement('div');
-container.className = 'container';
+container.classList.add('container');
 
 arrayOfPersons.forEach(item => {
 	let objectValue = Object.values(item);
 	let userCard = document.createElement('div');
-	userCard.className = 'userCard';
+	userCard.classList.add('userCard');
 	let userName = document.createElement('div');
 	userName.style.padding = '10px'
 	let userSurName = document.createElement('div');
@@ -163,14 +163,10 @@ arrayOfPersons.forEach(item => {
 	userNationality.innerText = `Nationality: ${item.nationality}`;
 	objectValue.forEach(elem => {
 		if (Array.isArray(elem)) {
-			elem.forEach(elemList => {
-				// let li = document.createElement('li');
-				let ul = document.createElement('ul');
-				// li.innerText = elem1;
-				// ul.append(li);
+			elem.forEach(elemList => {				
+				let ul = document.createElement('ul');				
 				ul.innerHTML = `<li>${elemList}</li>`
 				userCard.append(ul);
-
 			})
 		}
 	})
